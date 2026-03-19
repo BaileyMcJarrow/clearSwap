@@ -1,13 +1,14 @@
+#!/bin/bash
+
 # /usr/local/bin/clearSwap.sh 
 # make it executable (chmod +x /usr/local/bin/clearSwap.sh).
-#!/bin/bash
 
 # Define config file path
 CONFIG_FILE="/etc/clearSwap.conf"
 
 # Default values (fallback if config is missing)
-SWAP_THRESHOLD=80
-CHECK_INTERVAL=60
+SWAP_THRESHOLD=60
+CHECK_INTERVAL=3600
 
 # Load configuration if the file exists
 if [ -f "$CONFIG_FILE" ]; then
