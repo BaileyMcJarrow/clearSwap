@@ -1,0 +1,13 @@
+[Unit]
+Description=ClearSwap - Intelligent Swap Memory Manager
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/clearSwap.sh
+Restart=on-failure
+RestartSec=10
+# Logging will automatically be handled by journalctl
+
+[Install]
+WantedBy=multi-user.target
